@@ -1,7 +1,9 @@
+"use client";
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { buttonVariants } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 
 const Navbar = () => {
   const user = undefined;
@@ -44,30 +46,28 @@ const Navbar = () => {
                     className: "hidden sm:flex items-center gap-1",
                   })}
                 >
-                  Criar
+                  Criar capinha
                   <ArrowRight className="ml-1.5 h-5 w-5" />
                 </Link>
               </>
             ) : (
               <>
-                <Link
-                  href="/api/auth/register"
+                <RegisterLink
                   className={buttonVariants({
                     size: "sm",
                     variant: "ghost",
                   })}
                 >
                   Criar conta
-                </Link>
-                <Link
-                  href="/api/auth/login"
+                </RegisterLink>
+                <LoginLink
                   className={buttonVariants({
                     size: "sm",
                     variant: "ghost",
                   })}
                 >
                   Login
-                </Link>
+                </LoginLink>
                 <div className="h-8 w-px bg-zinc-200 hidden sm:block" />
                 <Link
                   href="/configure/upload"
