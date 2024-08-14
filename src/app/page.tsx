@@ -109,6 +109,87 @@ export default function Home() {
               alt="oroboro"
             />
           </div>
+          <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16">
+            {/* Testimonial 1 */}
+            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+              <div className="flex gap-0.5 mb-2">
+                {Array(5)
+                  .fill(null)
+                  .map((_, index) => (
+                    <Star
+                      key={index}
+                      className="h-5 w-5 text-green-600 fill-green-600"
+                    />
+                  ))}
+              </div>
+              <div className="text-lg leading-8">
+                <p>
+                  &quot;A capinha parece bem durável e até recebi um elogio pelo
+                  design. Estou com essa capinha há dois meses e meio e{" "}
+                  <span className="p-0.5 bg-slate-800 text-white">
+                    a imagem está super nítida
+                  </span>
+                  , na capinha que eu tinha antes, a imagem começou a desbotar
+                  para uma cor amarelada depois de algumas semanas.
+                  Adorei.&quot;
+                </p>
+              </div>
+              <div className="flex gap-4 mt-2">
+                <img
+                  src="/users/user-1.png"
+                  className="rounded-full h-12 w-12 object-cover"
+                  alt="Cliente 1"
+                />
+                <div className="flex flex-col">
+                  <p className="font-semibold">João</p>
+                  <div className="flex gap-1.5 items-center text-zinc-600">
+                    <Check className="h-4 w-4 stroke-[3px] text-green-600" />
+                    <p className="text-sm">Compra verificada</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+              <div className="flex gap-0.5 mb-2">
+                {Array(5)
+                  .fill(null)
+                  .map((_, index) => (
+                    <Star
+                      key={index}
+                      className="h-5 w-5 text-green-600 fill-green-600"
+                    />
+                  ))}
+              </div>
+              <div className="text-lg leading-8">
+                <p>
+                  &quot;Eu geralmente guardo meu telefone junto com as chaves no
+                  bolso, o que causou alguns arranhões bem visíveis em todas as
+                  capinhas que já tive. Nessa, além de um arranhão quase
+                  imperceptível no canto,{" "}
+                  <span className="p-0.5 bg-slate-800 text-white">
+                    parece nova em folha após cerca de meio ano
+                  </span>
+                  . Gostei muito.&quot;
+                </p>
+              </div>
+              <div className="flex gap-4 mt-2">
+                <img
+                  src="/users/user-2.png"
+                  className="rounded-full h-12 w-12 object-cover"
+                  alt="Cliente 2"
+                />
+                <div className="flex flex-col">
+                  <p className="font-semibold">Letícia</p>
+                  <div className="flex gap-1.5 items-center text-zinc-600">
+                    <Check className="h-4 w-4 stroke-[3px] text-green-600" />
+                    <p className="text-sm">Compra verificada</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </MaxWidthWrapper>
       </section>
     </div>
