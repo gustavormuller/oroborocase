@@ -3,7 +3,9 @@ import { Icons } from "@/components/Icons";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Phone from "@/components/Phone";
 import { Reviews } from "@/components/Reviews";
-import { Check, Star } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
+import { ArrowRight, Check, Star } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -245,6 +247,17 @@ export default function Home() {
               <Check className="h-5 w-5 text-green-600 inline mr-1.5" />
               Garantia de impressão de 5 anos
             </li>
+            <div className="flex justify-center">
+              <Link
+                className={buttonVariants({
+                  size: "lg",
+                  className: "mx-auto mt-8",
+                })}
+                href="/configure/upload"
+              >
+                Crie sua capinha agora <ArrowRight className="h-4 w-4 ml-1.5" />
+              </Link>
+            </div>
           </ul>
         </MaxWidthWrapper>
       </section>
