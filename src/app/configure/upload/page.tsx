@@ -57,16 +57,33 @@ const Page = () => {
                 {isUploading ? (
                   <div className="flex flex-col items-center">
                     <p>Carregando...</p>
-                    <Progress value={uploadProgress} className="mt-2 w-40 h-2 bg-gray-300" />
+                    <Progress
+                      value={uploadProgress}
+                      className="mt-2 w-40 h-2 bg-gray-300"
+                    />
                   </div>
                 ) : isPending ? (
-                  <div></div>
+                  <div className="flex flex-col items-center">
+                    <p>Redirecionando, por favor aguarde...</p>
+                  </div>
                 ) : isDragOver ? (
-                  <span></span>
+                  <p>
+                    <span className="font-semibold">Solte o arquivo</span> para
+                    fazer upload
+                  </p>
                 ) : (
-                  <span></span>
+                  <p>
+                    <span className="font-semibold">
+                      Clique para fazer upload
+                    </span>{" "}
+                    ou arraste e solte
+                  </p>
                 )}
               </div>
+
+              {isPending ? null : (
+                <p className="text-xs text-zinc-500">PNG, JPG, JPEG</p>
+              )}
             </div>
           )}
         </Dropzone>
